@@ -28,7 +28,7 @@ class NewGameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func submitNewMatch(_ sender: Any) {˚
+    @IBAction func submitNewMatch(_ sender: Any) {
         if let userScore = userScoreTextField.text {
             if let userScoreInt = Int(userScore) {
                 if let opponentScore = opponentScoreTextField.text {
@@ -40,6 +40,7 @@ class NewGameViewController: UIViewController {
         }
         let users = [User.loggedInPlayer(), User.getUserByUsername(username: "opponent")]
         let match = Match(players: users, scores: scores)
+        User.loggedInPlayer().games.append(match)
     }
 
     /*

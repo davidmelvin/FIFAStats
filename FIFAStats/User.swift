@@ -10,6 +10,7 @@ import UIKit
 
 class User: NSObject {
     var name: String = ""
+    var games: [Match] = []
     
     init(username: String) {
         name = username
