@@ -8,6 +8,7 @@ target 'FIFAStats' do
   # Pods for FIFAStats
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   target 'FIFAStatsTests' do
     inherit! :search_paths

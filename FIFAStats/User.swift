@@ -2,25 +2,26 @@
 //  User.swift
 //  FIFAStats
 //
-//  Created by David Melvin on 11/23/17.
+//  Created by David Melvin on 11/26/17.
 //  Copyright © 2017 David Melvin. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import Firebase
 
-class User: NSObject {
-    var name: String = ""
-    var games: [Match] = []
+struct User {
     
-    init(username: String) {
-        name = username
+    let uid: String
+    let email: String
+    
+    init(authData: User) {
+        uid = authData.uid
+        email = authData.email
     }
     
-    static func loggedInPlayer() -> User{
-        return User(username: "loggedInUser")
+    init(uid: String, email: String) {
+        self.uid = uid
+        self.email = email
     }
     
-    static func getUserByUsername(username: String) -> User{
-        return User(username: username)
-    }
 }

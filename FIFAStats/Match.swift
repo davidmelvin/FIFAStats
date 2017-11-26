@@ -2,19 +2,19 @@
 //  Match.swift
 //  FIFAStats
 //
-//  Created by David Melvin on 11/23/17.
+//  Created by David Melvin on 11/26/17.
 //  Copyright © 2017 David Melvin. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Match: NSObject {
-    var players: [User]
-    var scores: [Int]
-    
-    init(players: [User], scores: [Int]) {
-        self.players = players
-        self.scores = scores
-    }
+struct Match {
+    let team1: Team
+    let team2: Team
+}
 
+struct Team {
+    let clubName: String
+    let score: Int
+    let players: [User]
 }

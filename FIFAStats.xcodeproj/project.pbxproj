@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		434E540015147DE80B6EBA5F /* Pods_FIFAStatsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2311851DE97FC624C9252512 /* Pods_FIFAStatsUITests.framework */; };
-		6366348A1FC6B2EF00E149B3 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636634891FC6B2EF00E149B3 /* Match.swift */; };
-		6366348D1FC6B67C00E149B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6366348C1FC6B67C00E149B3 /* User.swift */; };
+		631230F51FCB4E44009F1E27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631230F41FCB4E44009F1E27 /* User.swift */; };
+		631230F71FCB4EF2009F1E27 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631230F61FCB4EF2009F1E27 /* Match.swift */; };
+		631230F91FCB6A6F009F1E27 /* GameHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631230F81FCB6A6F009F1E27 /* GameHistoryViewController.swift */; };
+		631230FB1FCB6CA9009F1E27 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631230FA1FCB6CA9009F1E27 /* MatchTableViewCell.swift */; };
 		6366348F1FC6B73A00E149B3 /* NewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6366348E1FC6B73A00E149B3 /* NewGameViewController.swift */; };
 		63DE4BB51FCA677E007F0EC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63DE4BB41FCA677E007F0EC2 /* GoogleService-Info.plist */; };
 		63DE4BB61FCA677E007F0EC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63DE4BB41FCA677E007F0EC2 /* GoogleService-Info.plist */; };
@@ -50,8 +52,10 @@
 		3213D2944E58BD2385551E6E /* Pods_FIFAStats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIFAStats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		531FA65A17D9B26237042207 /* Pods-FIFAStats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIFAStats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FIFAStats/Pods-FIFAStats.debug.xcconfig"; sourceTree = "<group>"; };
 		5F727471E04B02CB093274AD /* Pods_FIFAStatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIFAStatsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		636634891FC6B2EF00E149B3 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
-		6366348C1FC6B67C00E149B3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		631230F41FCB4E44009F1E27 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		631230F61FCB4EF2009F1E27 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		631230F81FCB6A6F009F1E27 /* GameHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHistoryViewController.swift; sourceTree = "<group>"; };
+		631230FA1FCB6CA9009F1E27 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		6366348E1FC6B73A00E149B3 /* NewGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameViewController.swift; sourceTree = "<group>"; };
 		63DE4BB41FCA677E007F0EC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63DE4BB91FCA69F9007F0EC2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -108,8 +112,8 @@
 		6366348B1FC6B66E00E149B3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				636634891FC6B2EF00E149B3 /* Match.swift */,
-				6366348C1FC6B67C00E149B3 /* User.swift */,
+				631230F41FCB4E44009F1E27 /* User.swift */,
+				631230F61FCB4EF2009F1E27 /* Match.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -121,6 +125,8 @@
 				63DE4BBB1FCA6A15007F0EC2 /* SignupViewController.swift */,
 				63DE4BBD1FCA6A28007F0EC2 /* ResetPasswordViewController.swift */,
 				6366348E1FC6B73A00E149B3 /* NewGameViewController.swift */,
+				631230F81FCB6A6F009F1E27 /* GameHistoryViewController.swift */,
+				631230FA1FCB6CA9009F1E27 /* MatchTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -373,12 +379,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-FIFAStats/Pods-FIFAStats-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,12 +514,14 @@
 			files = (
 				63DE4BBA1FCA69F9007F0EC2 /* LoginViewController.swift in Sources */,
 				63DE4BBC1FCA6A15007F0EC2 /* SignupViewController.swift in Sources */,
-				6366348D1FC6B67C00E149B3 /* User.swift in Sources */,
 				63DE4BBE1FCA6A28007F0EC2 /* ResetPasswordViewController.swift in Sources */,
+				631230F71FCB4EF2009F1E27 /* Match.swift in Sources */,
 				63EAD38D1FBCDE8C00C3D4FC /* ViewController.swift in Sources */,
 				6366348F1FC6B73A00E149B3 /* NewGameViewController.swift in Sources */,
 				63EAD38B1FBCDE8C00C3D4FC /* AppDelegate.swift in Sources */,
-				6366348A1FC6B2EF00E149B3 /* Match.swift in Sources */,
+				631230FB1FCB6CA9009F1E27 /* MatchTableViewCell.swift in Sources */,
+				631230F91FCB6A6F009F1E27 /* GameHistoryViewController.swift in Sources */,
+				631230F51FCB4E44009F1E27 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
