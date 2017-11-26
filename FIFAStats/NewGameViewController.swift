@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class NewGameViewController: UIViewController {
 
-    @IBOutlet weak var userScoreTextField: UITextField!
-    @IBOutlet weak var opponentScoreTextField: UITextField!
     @IBOutlet weak var userTeamTextField: UITextField!
     @IBOutlet weak var opponentTeamTextField: UITextField!
     
@@ -28,19 +28,34 @@ class NewGameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func submitNewMatch(_ sender: Any) {
-        if let userScore = userScoreTextField.text {
-            if let userScoreInt = Int(userScore) {
-                if let opponentScore = opponentScoreTextField.text {
-                    if let opponentScoreInt = Int(opponentScore) {
-                        let scores = [userScoreInt, opponentScoreInt]
-                    }
-                }
+    @IBAction func logoutAction(_ sender: Any) {
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUp")
+                present(vc, animated: true, completion: nil)
+
+                
+            } catch let error as NSError {
+                print(error.localizedDescription)
             }
         }
-        let users = [User.loggedInPlayer(), User.getUserByUsername(username: "opponent")]
-        let match = Match(players: users, scores: scores)
-        User.loggedInPlayer().games.append(match)
+    }
+
+    
+    @IBAction func submitNewMatch(_ sender: Any) {
+//        if let userScore = userScoreTextField.text {
+//            if let userScoreInt = Int(userScore) {
+//                if let opponentScore = opponentScoreTextField.text {
+//                    if let opponentScoreInt = Int(opponentScore) {
+//                        let scores = [userScoreInt, opponentScoreInt]
+//                    }
+//                }
+//            }
+//        }
+//        let users = [User.loggedInPlayer(), User.getUserByUsername(username: "opponent")]
+//        let match = Match(players: users, scores: [1])
+//        User.loggedInPlayer().games.append(match)
     }
 
     /*
