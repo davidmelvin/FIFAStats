@@ -43,10 +43,7 @@ class LoginViewController: UIViewController {
             Auth.auth().signIn(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!) { (user, error) in
                 
                 if error == nil {
-                    
-                    //Print into the console if successfully logged in
-                    print("You have successfully logged in")
-                    
+                                        
                     //Go to the HomeViewController if the login is sucessful
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBar")
                     self.present(vc!, animated: true, completion: nil)

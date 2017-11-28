@@ -63,7 +63,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUP-Su-9T0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FC Barcelona" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aUP-Su-9T0">
                                 <rect key="frame" x="239" y="286" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -113,8 +113,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="opponentTeamTextField" destination="aUP-Su-9T0" id="QE8-Ut-Y1i"/>
-                        <outlet property="userTeamTextField" destination="t76-cW-r5z" id="CdW-xa-k4P"/>
+                        <outlet property="team1ClubName" destination="t76-cW-r5z" id="XuP-XQ-Kae"/>
+                        <outlet property="team1Score" destination="PuV-ha-nt7" id="Ovj-Wp-CN8"/>
+                        <outlet property="team2ClubName" destination="aUP-Su-9T0" id="xkj-jy-Nbc"/>
+                        <outlet property="team2Score" destination="h5A-Dp-O0o" id="khs-am-0gi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -561,8 +563,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="NQl-Iv-NfV"/>
         <segue reference="otJ-pB-akf"/>
-        <segue reference="Sqe-Di-acH"/>
-        <segue reference="zjz-D9-TVC"/>
+        <segue reference="v4E-K5-ZZO"/>
     </inferredMetricsTieBreakers>
 </document>
